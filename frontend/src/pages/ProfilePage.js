@@ -154,7 +154,7 @@ const handleDeleteAccount = async () => {
               <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '30px' }}>
                 <div style={{ width: '100px', height: '100px', borderRadius: '50%', background: 'rgba(0, 180, 216, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2.5rem', color: '#00B4D8', overflow: 'hidden' }}>
                   {user.profilePic ? (
-                     <img src={`http://localhost:5000/uploads/${user.profilePic}`} alt="Profile" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                     <img src={`${process.env.REACT_APP_API_URL?.replace('/api','') || ''}/uploads/${user.profilePic}`} alt="Profile" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   ) : (
                      user.name.charAt(0).toUpperCase()
                   )}

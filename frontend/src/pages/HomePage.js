@@ -121,7 +121,7 @@ function HomePage({ theme, toggleTheme }) {
                   {/* Display Image if one exists */}
                   {post.image && (
                     <img 
-                      src={`http://localhost:5000/uploads/${post.image}`} 
+                      src={`${process.env.REACT_APP_API_URL?.replace('/api','') || ''}/uploads/${post.image}`} 
                       alt={post.title} 
                       // Fixed the height to 200px so all images match and don't break the grid!
                       style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '5px', marginBottom: '15px' }}

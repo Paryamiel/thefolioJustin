@@ -90,7 +90,7 @@ function SinglePostPage() {
       
       <article className="dark-form" style={{ padding: '30px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', marginBottom: '40px' }}>
         {post.image && (
-          <img src={`http://localhost:5000/uploads/${post.image}`} alt={post.title} style={{ width: '100%', maxHeight: '500px', objectFit: 'cover', borderRadius: '8px', marginBottom: '20px' }} />
+          <img src={`${process.env.REACT_APP_API_URL?.replace('/api','') || ''}/uploads/${post.image}`} alt={post.title} style={{ width: '100%', maxHeight: '500px', objectFit: 'cover', borderRadius: '8px', marginBottom: '20px' }} />
         )}
         <h1 style={{ color: '#00B4D8', marginBottom: '10px', fontSize: '2.5rem' }}>{post.title}</h1>
         <div style={{ fontSize: '14px', opacity: 0.7, marginBottom: '20px', paddingBottom: '20px', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>

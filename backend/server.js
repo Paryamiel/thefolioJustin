@@ -16,7 +16,7 @@ const app = express();
 connectDB(); // Connect to MongoDB
 
 // Middleware // Allow React (port 3000) to call this server 
-app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+app.use(cors());
 
 // Parse incoming JSON request bodies 
 app.use(express.json());
