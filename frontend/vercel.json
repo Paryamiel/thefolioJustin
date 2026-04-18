@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/api/:match*", "destination": "https://thefoliojustin.onrender.com/api/:match*" },
+    { "source": "/uploads/:match*", "destination": "https://thefoliojustin.onrender.com/uploads/:match*" }
+  ]
+}
